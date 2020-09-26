@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontendAppPeliculas';
+  title = '';
+  constructor(private http: HttpClient){}
+
+  ngOnInit (){
+    this.http.get('http://localhost:8080', {responseType:'text'}).subscribe((resp:any) => {
+      this.title = resp;
+    })
+    
+  }
+
 }
+
