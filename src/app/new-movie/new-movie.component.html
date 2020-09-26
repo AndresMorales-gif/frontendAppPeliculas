@@ -1,0 +1,39 @@
+<div>
+    <form>
+        <div>
+            <label for="title">Titulo:</label>
+            <input name="title" type="text">
+        </div>
+        <div>
+            <label for="description">Descripcion:</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="kind">Tipo:</label>
+            <select name="kind" id="kind">
+                <option value="comedia">Comedia</option>
+                <option value="drama">Drama</option>
+                <option value="terror">Terror</option>
+                <option value="romance">Romance</option>
+                <option value="accion">Accion</option>
+                <option value="anime">Anime</option>
+            </select>
+        </div>  
+        <div>
+            <label for="serieOrMovie">Serie o pelicula:</label>
+            <select name="serieOrMovie" id="serieOrMovie">
+                <option value="0">Pelicula</option>
+                <option value="1">Serie</option>
+            </select>
+        </div>
+        <div>
+            <label for="launching">Lanzamiento:</label>
+            <input type="date" name="launching" id="launching">
+        </div>
+        <div>
+            <label for="image">Portada:</label>
+            <input type="file" accept="image/*" name="image" id="image" (change)="onUpload($event)">
+        </div>
+        <button (click)="newMovie()" class="button">Enviar</button>
+    </form>
+</div>

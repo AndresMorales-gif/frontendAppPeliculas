@@ -1,0 +1,60 @@
+<div class="content-form">
+    <form (submit)="newMovie()" [formGroup]="movieForm">
+        <div class="element-form">
+            <label for="title">Titulo:</label>
+            <input name="title" type="text" formControlName="title">
+            <div
+                *ngIf="movieForm.get('title').invalid && (movieForm.get('title').dirty || movieForm.get('title').touched)"
+                class="alert-message">
+                <div *ngIf="movieForm.get('title').errors.required">
+                    El Titulo es requerido
+                </div>
+            </div>
+        </div>
+        <div class="element-form">
+            <label for="description">Descripcion:</label>
+            <textarea name="description" id="description" cols="30" rows="10" formControlName="description"></textarea>
+        </div>
+        <div class="element-form">
+            <label for="kind">Tipo:</label>
+            <select name="kind" id="kind" formControlName="kind" required="required">
+                <option value="comedia">Comedia</option>
+                <option value="drama">Drama</option>
+                <option value="terror">Terror</option>
+                <option value="romance">Romance</option>
+                <option value="accion">Accion</option>
+                <option value="anime">Anime</option>
+            </select>
+        </div>  
+        <div class="element-form">
+            <label for="serieOrMovie">Serie o pelicula:</label>
+            <select name="serieOrMovie" id="serieOrMovie" formControlName="serieOrMovie">
+                <option value="0">Pelicula</option>
+                <option value="1">Serie</option>
+            </select>
+        </div>
+        <div class="element-form">
+            <label for="launching">Lanzamiento:</label>
+            <input type="date" name="launching" id="launching" formControlName="launching">
+            <div
+                *ngIf="movieForm.get('launching').invalid && (movieForm.get('launching').dirty || movieForm.get('launching').touched)"
+                class="alert-message">
+                <div *ngIf="movieForm.get('launching').errors.required">
+                    La Fecha es requerida
+                </div>
+            </div>
+        </div>
+        <div class="element-form">
+            <label for="image">Portada:</label>
+            <input type="file" accept="image/*" name="imageF" id="imageF" (change)="onUpload($event)">
+            <div class="progress">
+                <span> {{(uploadPercent | async) + '%'}}</span>
+            </div>
+            <input type="hidden" name="image" id="image" formControlName="image" [value]="urlImage | async">        
+        </div>
+        <button *ngIf="urlImage | async; else btnDisabled" type="submit" class="button" [disabled]="movieForm.invalid">Enviar</button>
+        <ng-template #btnDisabled>
+            <button type="submit" class="button" disabled=true>Enviar</button>
+        </ng-template>
+    </form>
+</div>

@@ -17,4 +17,8 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  auth(){
+    
+  }
+
 }
