@@ -8,9 +8,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  headersApp;
-  peliculas="";
-  body = {'data':{
+  private headersApp;
+  private movies;
+  private body = {'data':{
         'nombreUsuario':'judapagon1996@hotmail.es',
         'clave':'Dpasaje10'
       }};
@@ -22,11 +22,12 @@ export class HomeComponent implements OnInit {
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, DELETE',
       'X-MAC-SO':'WigilabsTest'
     });
-    
-    
-
     this.http.post('https://apiselfservice.co/api/index.php/v1/soap/LoginUsuario.json', this.body, {headers: this.headersApp}).subscribe((resp:any) => {      
       console.log(resp)
+    });
+    this.http.get('http://localhost:8080/qualification/top', {responseType:'text'}).subscribe((res)=>{
+      this.movies = res;
+      console.log(JSON.parse(res));
     });
   }
 

@@ -11,9 +11,7 @@ export class AppComponent {
   constructor(private http: HttpClient){}
 
   ngOnInit (){
-    this.http.get('http://localhost:8080', {responseType:'text'}).subscribe((resp:any) => {
-      this.title = resp;
-    })
+   
     
   }
 
