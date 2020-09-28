@@ -1,5 +1,42 @@
 <div class="bar">
     <button (click)="navigateToLogin()">login</button>
 </div>
+<div *ngIf="movies">
+    <h2>Nuestros top</h2> 
+    <app-top-one-movie 
+        [title]="movies[0].title"
+        [description]="movies[0].description"
+        [image]="movies[0].image"
+        [kind]="movies[0].kind"
+        [launching]="movies[0].launching"></app-top-one-movie>
 
- <app-top-one-movie></app-top-one-movie>
+    <div *ngIf="movies[1]">
+        <app-top-others-movie
+            [title]="movies[1].title"
+            [topNumber]="2"
+            [description]="movies[1].description"
+            [image]="movies[1].image"
+            [kind]="movies[1].kind"
+            [launching]="movies[1].launching"></app-top-others-movie>
+    </div>
+
+    <div *ngIf="movies[2]">
+        <app-top-others-movie
+            [title]="movies[2].title"
+            [topNumber]="3"
+            [description]="movies[2].description"
+            [image]="movies[2].image"
+            [kind]="movies[2].kind"
+            [launching]="movies[2].launching"></app-top-others-movie>
+    </div>
+
+    <div *ngIf="movies[3]">
+        <app-top-others-movie
+            [title]="movies[3].title"
+            [topNumber]="4"
+            [description]="movies[3].description"
+            [image]="movies[3].image"
+            [kind]="movies[3].kind"
+            [launching]="movies[3].launching"></app-top-others-movie>
+    </div>
+</div>

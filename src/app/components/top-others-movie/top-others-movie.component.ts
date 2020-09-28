@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-top-one-movie',
-  templateUrl: './top-one-movie.component.html',
-  styleUrls: ['./top-one-movie.component.css']
+  selector: 'app-top-others-movie',
+  templateUrl: './top-others-movie.component.html',
+  styleUrls: ['./top-others-movie.component.css']
 })
-export class TopOneMovieComponent implements OnInit {
+export class TopOthersMovieComponent implements OnInit {
 
   @Input() title: String;
   @Input() description: String;
@@ -13,6 +13,7 @@ export class TopOneMovieComponent implements OnInit {
   @Input() image: String;
   @Input() serieOrMovie: number;
   @Input() launching: Date;
+  @Input() topNumber: number;
 
   public som;
 
@@ -25,6 +26,7 @@ export class TopOneMovieComponent implements OnInit {
     else {
       this.som = 'Serie';
     }
+
   }
 
 }

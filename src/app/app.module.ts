@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { FormMovieComponent } from './components/form-movie/form-movie.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TopOneMovieComponent } from './components/top-one-movie/top-one-movie.component';
+import { TopOthersMovieComponent } from './components/top-others-movie/top-others-movie.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TopOneMovieComponent } from './components/top-one-movie/top-one-movie.c
     AdminComponent,
     NewMovieComponent,
     FormMovieComponent,
-    TopOneMovieComponent
+    TopOneMovieComponent,
+    TopOthersMovieComponent
   ],
   imports: [
     BrowserModule,

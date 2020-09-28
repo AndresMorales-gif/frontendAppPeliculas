@@ -1,1 +1,14 @@
-<p>top-one-movie works!</p>
+<div class="content-top">
+    <div class="number-one">
+        <h1>1</h1>
+    </div>        
+    <h3 class="title-top">{{ title }}</h3>
+    <div class="content-image-top">   
+        <img class="image-top" src="{{ image }}" alt="{{ title }}">
+    </div>
+    <div class="kind-top">
+        <h4>{{ som }}</h4>
+        <h4>{{ kind }} <span>{{ launching | date:'yyyy-MM-dd' }}</span></h4>
+    </div>
+    <p *ngIf="description">{{ description }}</p>
+</div>

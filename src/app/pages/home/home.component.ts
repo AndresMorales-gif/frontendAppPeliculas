@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   private headersApp;
-  private movies;
+  public movies;
   private body = {'data':{
         'nombreUsuario':'judapagon1996@hotmail.es',
         'clave':'Dpasaje10'
@@ -26,8 +26,7 @@ export class HomeComponent implements OnInit {
       console.log(resp)
     });
     this.http.get('http://localhost:8080/qualification/top', {responseType:'text'}).subscribe((res)=>{
-      this.movies = res;
-      console.log(JSON.parse(res));
+      this.movies = JSON.parse(res);
     });
   }
 
