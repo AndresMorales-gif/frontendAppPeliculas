@@ -4,16 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { AdminComponent } from './admin/admin.component';
-import { NewMovieComponent } from './new-movie/new-movie.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { NewMovieComponent } from './pages/new-movie/new-movie.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
-import { FormMovieComponent } from './form-movie/form-movie.component';
+import { FormMovieComponent } from './components/form-movie/form-movie.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TopOneMovieComponent } from './components/top-one-movie/top-one-movie.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     AdminComponent,
     NewMovieComponent,
-    FormMovieComponent
+    FormMovieComponent,
+    TopOneMovieComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseStorageService } from '../firebaase-storage.service.spec';
 
 @Component({
   selector: 'app-new-movie',
@@ -10,7 +9,7 @@ export class NewMovieComponent implements OnInit {
 
   public messaggeFile = 'No hay un archivo seleccionado';
   public nameFile = '';
-  constructor(private firebaseStorage: FirebaseStorageService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

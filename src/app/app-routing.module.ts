@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { AdminComponent } from './admin/admin.component';
-import { NewMovieComponent } from './new-movie/new-movie.component';
-import { FormMovieComponent } from './form-movie/form-movie.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { NewMovieComponent } from './pages/new-movie/new-movie.component';
+import { FormMovieComponent } from './components/form-movie/form-movie.component';
 
 const routes: Routes = [
     {path:'', component: HomeComponent},

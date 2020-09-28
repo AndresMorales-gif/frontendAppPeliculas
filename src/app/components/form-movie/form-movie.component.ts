@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { FirebaseStorageService } from '../firebaase-storage.service.spec';
+import { FirebaseStorageService } from '../../firebaase-storage.service.spec';
 import { finalize } from 'rxjs/operators'
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
