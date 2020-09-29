@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TopOthersMovieComponent implements OnInit {
 
   @Input() title: String;
-  @Input() description: String;
   @Input() kind: String;
   @Input() image: String;
   @Input() serieOrMovie: number;

@@ -16,6 +16,7 @@ import { FormMovieComponent } from './components/form-movie/form-movie.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { TopOneMovieComponent } from './components/top-one-movie/top-one-movie.component';
 import { TopOthersMovieComponent } from './components/top-others-movie/top-others-movie.component';
+import { CarouselMoviesComponent } from './components/carousel-movies/carousel-movies.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TopOthersMovieComponent } from './components/top-others-movie/top-other
     NewMovieComponent,
     FormMovieComponent,
     TopOneMovieComponent,
-    TopOthersMovieComponent
+    TopOthersMovieComponent,
+    CarouselMoviesComponent
   ],
   imports: [
     BrowserModule,

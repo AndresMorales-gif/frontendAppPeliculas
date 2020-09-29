@@ -1,17 +1,13 @@
-<div class="content-top-other">
-    <div class="content-text-top-other">
-        <div class="number-top-other">
-            <h1>{{ topNumber }}</h1>
-        </div>        
-        <h3 class="title-top-other">{{ title }}</h3>
-        <div class="kind-top-other">
-            <h4>{{ som }}</h4>
-            <h4>{{ kind }} <span>{{ launching | date:'yyyy-MM-dd' }}</span></h4>
-        </div>
-        <p *ngIf="description">{{ description }}</p>
-    </div>
+<div class="content-top-other">   
+    <div class="number-top-other">
+        <h1>{{ topNumber }}</h1>
+    </div>        
+    <h3 class="title-top-other">{{ title }}</h3>
     <div class="content-image-top-other">   
         <img class="image-top-other" src="{{ image }}" alt="{{ title }}">
     </div>
-        
+    <div class="kind-top-other">
+        <h4>{{ som }}</h4>
+        <h4>{{ kind }} <span>{{ launching | date:'yyyy-MM-dd' }}</span></h4>
+    </div>       
 </div>

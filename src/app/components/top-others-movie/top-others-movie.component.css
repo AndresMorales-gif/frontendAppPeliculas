@@ -8,6 +8,9 @@
     box-shadow: 3px 1px 12px black;
     color: white;
     margin-bottom: 5px;
+    width: 90%;
+    height: 400px;
+    margin: auto;
 }
 .number-one-other{
     text-align: left;
@@ -17,17 +20,10 @@
     font-size: 20px;
 }
 .image-top-other{    
-    max-width: 250px;
-    max-height: 250px;
+    max-height: 180px;
     display:block;
     margin:0 auto;
 }
-.content-text-top-other{
-    display: inline-block;
-    max-width: 65%;
-    padding-right: 10px;
-}
 .content-image-top-other{
-    display: inline-block;
-    width: 30%;
+    width: 100%;
 }
